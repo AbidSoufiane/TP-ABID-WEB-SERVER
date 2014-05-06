@@ -24,7 +24,7 @@ public class NouveauCv extends JFrame implements ActionListener{
         this.setLayout(null);
 
         labelnom = new JLabel("Nom : ");
-        labelnom.setBounds(40,15,150,20);//(liman,     ,lta7t)
+        labelnom.setBounds(40,15,150,20);//
         getContentPane().add(labelnom);
 
         lprenom = new JLabel("Prenom : ");

@@ -71,9 +71,9 @@ public class CurriculumController {
         loisir.getLoisirs().add("Ping Pong");
         loisir.getLoisirs().add("natation");
 
-        Curriculum resume1= new Curriculum("Abid", "Soufiane", "Rouen", "0123456789", "26", "célibataire", "sfn.abid@gmail.com", "M1 GIL", formations, experience, projets, connaissance, langues, loisir);
-        Curriculum resume2= new Curriculum("David", "David", "Paris", "0123456789", "26", "célibataire", "sfn.abid@gmail.com", "M1 GIL", formations, experience, projets, connaissance, langues, loisir);
-        Curriculum resume3= new Curriculum("Jack", "jacke", "Mont saint aignan", "0123456789", "26", "célibataire", "sfn.abid@gmail.com", "M1 GIL", formations, experience, projets, connaissance, langues, loisir);
+        Curriculum resume1= new Curriculum(5,"Abid", "Soufiane", "Rouen", "0123456789", "26", "célibataire", "sfn.abid@gmail.com", "M1 GIL", formations, experience, projets, connaissance, langues, loisir);
+        Curriculum resume2= new Curriculum(6,"David", "David", "Paris", "0123456789", "26", "célibataire", "sfn.abid@gmail.com", "M1 GIL", formations, experience, projets, connaissance, langues, loisir);
+        Curriculum resume3= new Curriculum(7,"Jack", "jacke", "Mont saint aignan", "0123456789", "26", "célibataire", "sfn.abid@gmail.com", "M1 GIL", formations, experience, projets, connaissance, langues, loisir);
 
 
         listecv.getListcv().add(resume1);
@@ -140,10 +140,10 @@ public class CurriculumController {
         loisir.getLoisirs().add("Ping Pong");
         loisir.getLoisirs().add("natation");
 
-        Curriculum resume1= new Curriculum("Cloud", "Soufiane", "Rabat1", "0123456789", "22", "célibataire", "sfn.abid@gmail.com", "M1 GIL", formations, experience, projets, connaissance, langues, loisir);
-        Curriculum resume2= new Curriculum("Michel", "Mic", "Rabat2", "0123456789", "24", "célibataire", "sfn.abid@gmail.com", "M1 GIL", formations, experience, projets, connaissance, langues, loisir);
-        Curriculum resume3= new Curriculum("Sarco", "sarco", "Rabat3", "0123456789", "23", "célibataire", "sfn.abid@gmail.com", "M1 GIL", formations, experience, projets, connaissance, langues, loisir);
-        Curriculum resume4= new Curriculum("gloria", "gloria", "Rabat4", "0123456789", "26", "célibataire", "sfn.abid@gmail.com", "M1 GIL", formations, experience, projets, connaissance, langues, loisir);
+        Curriculum resume1= new Curriculum(1,"Cloud", "Soufiane", "Rabat1", "0123456789", "22", "célibataire", "sfn.abid@gmail.com", "M1 GIL", formations, experience, projets, connaissance, langues, loisir);
+        Curriculum resume2= new Curriculum(2,"Michel", "Mic", "Rabat2", "0123456789", "24", "célibataire", "sfn.abid@gmail.com", "M1 GIL", formations, experience, projets, connaissance, langues, loisir);
+        Curriculum resume3= new Curriculum(3,"Sarco", "sarco", "Rabat3", "0123456789", "23", "célibataire", "sfn.abid@gmail.com", "M1 GIL", formations, experience, projets, connaissance, langues, loisir);
+        Curriculum resume4= new Curriculum(4,"gloria", "gloria", "Rabat4", "0123456789", "26", "célibataire", "sfn.abid@gmail.com", "M1 GIL", formations, experience, projets, connaissance, langues, loisir);
 
         listecv.getListcv().add(resume1);
         listecv.getListcv().add(resume2);

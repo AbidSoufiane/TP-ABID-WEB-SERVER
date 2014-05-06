@@ -140,7 +140,7 @@ public class CurriculumController {
         loisir.getLoisirs().add("Ping Pong");
         loisir.getLoisirs().add("natation");
 
-        Curriculum resume1= new Curriculum("Abid", "Soufiane", "Rabat1", "0123456789", "22", "célibataire", "sfn.abid@gmail.com", "M1 GIL", formations, experience, projets, connaissance, langues, loisir);
+        Curriculum resume1= new Curriculum("Cloud", "Soufiane", "Rabat1", "0123456789", "22", "célibataire", "sfn.abid@gmail.com", "M1 GIL", formations, experience, projets, connaissance, langues, loisir);
         Curriculum resume2= new Curriculum("Michel", "Mic", "Rabat2", "0123456789", "24", "célibataire", "sfn.abid@gmail.com", "M1 GIL", formations, experience, projets, connaissance, langues, loisir);
         Curriculum resume3= new Curriculum("Sarco", "sarco", "Rabat3", "0123456789", "23", "célibataire", "sfn.abid@gmail.com", "M1 GIL", formations, experience, projets, connaissance, langues, loisir);
         Curriculum resume4= new Curriculum("gloria", "gloria", "Rabat4", "0123456789", "26", "célibataire", "sfn.abid@gmail.com", "M1 GIL", formations, experience, projets, connaissance, langues, loisir);

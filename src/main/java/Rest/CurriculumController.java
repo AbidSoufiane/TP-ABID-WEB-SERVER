@@ -19,25 +19,25 @@ public class CurriculumController {
     @RequestMapping(value="{id}", method = RequestMethod.GET)
     public @ResponseBody Curriculum getCurriculumInXML(@PathVariable String id){
 
-        Formation form1= new Formation("du","au","formation1");
-        Formation form2= new Formation("du","au","formation2");
-        Formation form3= new Formation("du","au","formation3");
+        Formation form1= new Formation("du 02/09/2008","au 15/07/2009","formation1");
+        Formation form2= new Formation("du 01/09/2009","au 31/06/2013","formation2");
+        Formation form3= new Formation("du 02/09/2013","au 01/07/2013","formation3");
 
-        ExperiencePro exp1= new ExperiencePro("du","au","Experience1");
-        ExperiencePro exp2= new ExperiencePro("du","au","Experience2");
-        ExperiencePro exp3= new ExperiencePro("du","au","Experience3");
+        ExperiencePro exp1= new ExperiencePro("du 20/06/2008","au 31/09/2008","Experience1");
+        ExperiencePro exp2= new ExperiencePro("du 15/07/2009","au 02/09/2009","Experience2");
+        ExperiencePro exp3= new ExperiencePro("du 02/05/2012","au 02/09/2013","Experience3");
 
         ProjetRealiser proj1= new ProjetRealiser("Projet1","premier");
         ProjetRealiser proj2= new ProjetRealiser("Projet2","deuxieme");
         ProjetRealiser proj3= new ProjetRealiser("Projet3","troisieme");
 
-        ConnaissanceTech con1= new ConnaissanceTech("Connaissance1","a,b,c");
-        ConnaissanceTech con2= new ConnaissanceTech("Connaissance2","a,b,c");
-        ConnaissanceTech con3= new ConnaissanceTech("Connaissance3","a,b,c");
+        ConnaissanceTech con1= new ConnaissanceTech("Connaissance1","C++,Java,Android");
+        ConnaissanceTech con2= new ConnaissanceTech("Connaissance2","CSS,Jquery,JavaScript");
+        ConnaissanceTech con3= new ConnaissanceTech("Connaissance3","C,C++,Java");
 
-        Langues lang1= new Langues("Francais","A");
-        Langues lang2= new Langues("Anglais","A");
-        Langues lang3= new Langues("Arabe","A");
+        Langues lang1= new Langues("Francais","Bon niveau");
+        Langues lang2= new Langues("Anglais","Bon niveau");
+        Langues lang3= new Langues("Espagnol","Niveau academique");
 
 
 
@@ -88,25 +88,25 @@ public class CurriculumController {
     @RequestMapping(method = RequestMethod.GET)
     public @ResponseBody ListCurriculum getCurriculumsInXML(){
 
-        Formation form1= new Formation("du","au","formation1");
-        Formation form2= new Formation("du","au","formation2");
-        Formation form3= new Formation("du","au","formation3");
+        Formation form1= new Formation("du 01/10/2007","au 02/07/2008","formation1");
+        Formation form2= new Formation("du 01/10/2008","au 02/07/2013","formation2");
+        Formation form3= new Formation("du 01/10/2013","au 02/07/20014","formation3");
 
-        ExperiencePro exp1= new ExperiencePro("du","au","Experience1");
-        ExperiencePro exp2= new ExperiencePro("du","au","Experience2");
-        ExperiencePro exp3= new ExperiencePro("du","au","Experience3");
+        ExperiencePro exp1= new ExperiencePro("du 31/07/2008","au 01/10/2008","Experience1");
+        ExperiencePro exp2= new ExperiencePro("du 02/10/2010","au 29/10/2010","Experience2");
+        ExperiencePro exp3= new ExperiencePro("du 02/09/2013","au 02/11/2013","Experience3");
 
-        ProjetRealiser proj1= new ProjetRealiser("Projet1","premier");
-        ProjetRealiser proj2= new ProjetRealiser("Projet2","deuxieme");
-        ProjetRealiser proj3= new ProjetRealiser("Projet3","troisieme");
+        ProjetRealiser proj1= new ProjetRealiser("Projet1","premier projet");
+        ProjetRealiser proj2= new ProjetRealiser("Projet2","deuxieme projet");
+        ProjetRealiser proj3= new ProjetRealiser("Projet3","troisieme projet");
 
-        ConnaissanceTech con1= new ConnaissanceTech("Connaissance1","a,b,c");
-        ConnaissanceTech con2= new ConnaissanceTech("Connaissance2","a,b,c");
-        ConnaissanceTech con3= new ConnaissanceTech("Connaissance3","a,b,c");
+        ConnaissanceTech con1= new ConnaissanceTech("Connaissance1","java,C++,C");
+        ConnaissanceTech con2= new ConnaissanceTech("Connaissance2","C,Jquery,Java");
+        ConnaissanceTech con3= new ConnaissanceTech("Connaissance3","JS,HTML5,C++");
 
-        Langues lang1= new Langues("Francais","A");
-        Langues lang2= new Langues("Anglais","A");
-        Langues lang3= new Langues("Arabe","A");
+        Langues lang1= new Langues("Francais","Bon niveau");
+        Langues lang2= new Langues("Anglais","Bon niveau");
+        Langues lang3= new Langues("Arabe","Bon niveau");
 
 
 
@@ -140,9 +140,9 @@ public class CurriculumController {
         loisir.getLoisirs().add("Ping Pong");
         loisir.getLoisirs().add("natation");
 
-        Curriculum resume1= new Curriculum("Abid", "Soufiane", "Rabat1", "0123456789", "26", "célibataire", "sfn.abid@gmail.com", "M1 GIL", formations, experience, projets, connaissance, langues, loisir);
-        Curriculum resume2= new Curriculum("Michel", "Mic", "Rabat2", "0123456789", "26", "célibataire", "sfn.abid@gmail.com", "M1 GIL", formations, experience, projets, connaissance, langues, loisir);
-        Curriculum resume3= new Curriculum("Sarco", "sarco", "Rabat3", "0123456789", "26", "célibataire", "sfn.abid@gmail.com", "M1 GIL", formations, experience, projets, connaissance, langues, loisir);
+        Curriculum resume1= new Curriculum("Abid", "Soufiane", "Rabat1", "0123456789", "22", "célibataire", "sfn.abid@gmail.com", "M1 GIL", formations, experience, projets, connaissance, langues, loisir);
+        Curriculum resume2= new Curriculum("Michel", "Mic", "Rabat2", "0123456789", "24", "célibataire", "sfn.abid@gmail.com", "M1 GIL", formations, experience, projets, connaissance, langues, loisir);
+        Curriculum resume3= new Curriculum("Sarco", "sarco", "Rabat3", "0123456789", "23", "célibataire", "sfn.abid@gmail.com", "M1 GIL", formations, experience, projets, connaissance, langues, loisir);
         Curriculum resume4= new Curriculum("gloria", "gloria", "Rabat4", "0123456789", "26", "célibataire", "sfn.abid@gmail.com", "M1 GIL", formations, experience, projets, connaissance, langues, loisir);
 
         listecv.getListcv().add(resume1);

@@ -2,6 +2,7 @@ package Rest;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -11,6 +12,7 @@ import java.util.List;
 
 
 @XmlRootElement(name = "Curriculum")
+@XmlType(propOrder = {"nom","prenom","adresse","numerotele","age","situation","mail","titre","formations","experiencespro","projetrealises","connaissances","langues","loisirs"})
 public class Curriculum {
     private String nom;
     private String prenom;

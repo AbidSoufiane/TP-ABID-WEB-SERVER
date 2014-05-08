@@ -41,6 +41,7 @@ public class RequetPut {
 
         Source result = dispatcher.invoke(new JAXBSource(jc, resume));
 
+
     }
 
     public static void main(String args[]) throws Exception {
@@ -101,6 +102,6 @@ public class RequetPut {
         Curriculum resume2= new Curriculum(5,"Abid", "Soufiane", "Rabat2", "0123456789", "26", "célibataire", "sfn.abid@gmail.com", "M1 GIL", formations, experience, projets, connaissance, langues, loisir);
         Curriculum resume3= new Curriculum(6,"Abid", "Soufiane", "Rabat3", "0123456789", "26", "célibataire", "sfn.abid@gmail.com", "M1 GIL", formations, experience, projets, connaissance, langues, loisir);
         Curriculum resume4= new Curriculum(7,"Abid", "Soufiane", "Rabat4", "0123456789", "26", "célibataire", "sfn.abid@gmail.com", "M1 GIL", formations, experience, projets, connaissance, langues, loisir);
-        requetPut.addResume(resume1);
+
     }
 }

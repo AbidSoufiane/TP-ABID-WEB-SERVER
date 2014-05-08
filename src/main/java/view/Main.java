@@ -42,17 +42,17 @@ public class Main extends JFrame implements ActionListener {
 
         ajouter = new JButton("Ajouter");
         ajouter.addActionListener(this);
-        ajouter.setBounds(780,70,80,20);//
+        ajouter.setBounds(780,70,80,20);//(liman,     ,lta7t)
         getContentPane().add(ajouter);
 
         afficher= new JButton("afficher");
         afficher.addActionListener(this);
-        afficher.setBounds(780,100,80,20);//
+        afficher.setBounds(780,100,80,20);//(liman,     ,lta7t)
         getContentPane().add(afficher);
 
         effacer = new JButton("effacer");
         effacer.addActionListener(this);
-        effacer.setBounds(780,130,80,20);//
+        effacer.setBounds(780,130,80,20);//(liman,     ,lta7t)
         getContentPane().add(effacer);
 
         modelCv = new DefaultTableModel(){

@@ -13,7 +13,7 @@ import java.util.List;
 
 @XmlRootElement(name = "Curriculum")
 @XmlType(propOrder = {"id","nom","prenom","adresse","numerotele","age","situation","mail","titre","formations","experiencespro","projetrealises","connaissances","langues","loisirs"})
-public class Curriculum{
+public class Curriculum {
     private int id;
     private String nom;
     private String prenom;
@@ -31,7 +31,7 @@ public class Curriculum{
     private ListLangues langues;
     private ListLoisirs loisirs;
 
-    public Curriculum(int id, String nom, String prenom, String adresse, String numerotele, String age, String situation, String mail, String titre, ListFormation formations, ListExperiencePro experiencespro, ListProjetRealiser projetrealises, ListConnaissanceTech connaissances, ListLangues langues, ListLoisirs loisirs) {
+    public Curriculum(int id,String nom, String prenom, String adresse, String numerotele, String age, String situation, String mail, String titre, ListFormation formations, ListExperiencePro experiencespro, ListProjetRealiser projetrealises, ListConnaissanceTech connaissances, ListLangues langues, ListLoisirs loisirs) {
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;
@@ -58,13 +58,14 @@ public class Curriculum{
     }
 
     @XmlElement
-    public int getId(){
+    public int getId() {
         return id;
     }
 
-    public void setId(int id){
-        this.id=id;
+    public void setId(int id) {
+        this.id = id;
     }
+
     @XmlElement
     public String getNumerotele() {
         return numerotele;

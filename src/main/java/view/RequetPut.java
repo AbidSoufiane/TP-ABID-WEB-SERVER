@@ -1,24 +1,50 @@
-package Rest;
+package view;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
-import java.util.LinkedList;
+import Rest.*;
+
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.util.JAXBSource;
+import javax.xml.namespace.QName;
+import javax.xml.transform.Source;
+import javax.xml.ws.Dispatch;
+import javax.xml.ws.Service;
+import javax.xml.ws.handler.MessageContext;
+import javax.xml.ws.http.HTTPBinding;
+import java.util.Map;
+
 /**
- * Created by Abid on 03/05/2014.
+ * Created by pret on 08/05/2014.
  */
+public class RequetPut {
+    private Service service;
+    private JAXBContext jc;
 
-@Controller
-@RequestMapping("/Curriculum")
-public class CurriculumController {
-    private ListCurriculum listecv;
-    public CurriculumController(){
-        listecv= new ListCurriculum();
+    private static final QName qname = new QName("", "");
+    private static final String url = "http://localhost:8080/SpringMVC/Rest/Curriculum/";
+
+    public RequetPut() {
+        try {
+            jc = JAXBContext.newInstance(Curriculum.class, ExperiencePro.class,
+                    ConnaissanceTech.class, Langues.class , String.class);
+        } catch (JAXBException je) {
+            System.out.println("Cannot create JAXBContext " + je);
+        }
+    }
+    public void addResume(Curriculum resume) throws JAXBException {
+        service = Service.create(qname);
+        service.addPort(qname, HTTPBinding.HTTP_BINDING, url);
+        Dispatch<Source> dispatcher = service.createDispatch(qname,
+                Source.class, Service.Mode.MESSAGE);
+        Map<String, Object> requestContext = dispatcher.getRequestContext();
+        requestContext.put(MessageContext.HTTP_REQUEST_METHOD, "PUT");
+
+        Source result = dispatcher.invoke(new JAXBSource(jc, resume));
 
     }
 
-    @Autowired
-    public void SetCurriculum(){
+    public static void main(String args[]) throws Exception {
+        RequetPut  requetPut= new RequetPut();
         Formation form1= new Formation("du","au","formation1");
         Formation form2= new Formation("du","au","formation2");
         Formation form3= new Formation("du","au","formation3");
@@ -71,49 +97,10 @@ public class CurriculumController {
         loisir.getLoisirs().add("Ping Pong");
         loisir.getLoisirs().add("natation");
 
-        Curriculum resume1= new Curriculum(4,"Abid", "Soufiane", "Rabat1", "0123456789", "26", "célibataire", "sfn.abid@gmail.com", "M1 GIL", formations, experience, projets, connaissance, langues, loisir);
+        Curriculum resume1= new Curriculum(127,"Abid", "Soufiane", "Rabat1", "0123456789", "26", "célibataire", "sfn.abid@gmail.com", "M1 GIL", formations, experience, projets, connaissance, langues, loisir);
         Curriculum resume2= new Curriculum(5,"Abid", "Soufiane", "Rabat2", "0123456789", "26", "célibataire", "sfn.abid@gmail.com", "M1 GIL", formations, experience, projets, connaissance, langues, loisir);
         Curriculum resume3= new Curriculum(6,"Abid", "Soufiane", "Rabat3", "0123456789", "26", "célibataire", "sfn.abid@gmail.com", "M1 GIL", formations, experience, projets, connaissance, langues, loisir);
         Curriculum resume4= new Curriculum(7,"Abid", "Soufiane", "Rabat4", "0123456789", "26", "célibataire", "sfn.abid@gmail.com", "M1 GIL", formations, experience, projets, connaissance, langues, loisir);
-
-        listecv.getListcv().add(resume1);
-        listecv.getListcv().add(resume2);
-        listecv.getListcv().add(resume3);
-        listecv.getListcv().add(resume4);
-    }
-
-    @RequestMapping(value="{id}", method = RequestMethod.GET)
-    public @ResponseBody Curriculum getCurriculumInXML(@PathVariable int id){
-        for (int i=0;i<listecv.listcv.size();i++){
-            if(listecv.getListcv().get(i).getId()==id){
-                return listecv.getListcv().get(i);
-            }
-        }
-        return null;
-
-    }
-
-    @RequestMapping(method = RequestMethod.GET)
-    public @ResponseBody ListCurriculum getCurriculumsInXML(){
-
-
-        return listecv;
-
-    }
-
-    @RequestMapping(method = RequestMethod.PUT)
-     @ResponseBody public String  putCurriculumsInXML(@RequestBody Curriculum curriculum){
-       int id=curriculum.getId();
-        for (int i=0;i<listecv.listcv.size();i++){
-            if(listecv.getListcv().get(i).getId()==id){
-                return "CV existe déjà";
-            }
-        }
-        listecv.listcv.add(curriculum);
-
-
-        return " CV ajouter";
-
+        requetPut.addResume(resume1);
     }
 }
-

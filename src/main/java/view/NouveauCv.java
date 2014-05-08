@@ -15,16 +15,20 @@ import javax.swing.JTextField;
  * Created by Abid on 02/05/2014.
  */
 public class NouveauCv extends JFrame implements ActionListener{
-    private JTextField nom, prenom, adresse, age,mail, tele, situation, titrre,  cdescription, cspecialite, edatedebut, edatefin, edescription, fdatedebut, fdatefin, diplome, lniveau, lnom, projet, pdescription;
-    private JLabel labelnom, lprenom, ladresse, lage, lmail, ltele, lsituation, ltitrre,  lcdescription, lcspecialite, ledatedebut, ledatefin, ledescription, lfdatedebut, lfdatefin, ldiplome, llniveau, llnom, lprojet, lpdescription;
+    private JTextField id, nom, prenom, adresse, age,mail, tele, situation, titrre,  cdescription, cspecialite, edatedebut, edatefin, edescription, fdatedebut, fdatefin, diplome, lniveau, lnom, projet, pdescription;
+    private JLabel lid, labelnom, lprenom, ladresse, lage, lmail, ltele, lsituation, ltitrre,  lcdescription, lcspecialite, ledatedebut, ledatefin, ledescription, lfdatedebut, lfdatefin, ldiplome, llniveau, llnom, lprojet, lpdescription;
     private JButton enregistrer;
 
     public NouveauCv(){
         setSize(500,730);
         this.setLayout(null);
 
+        lid = new JLabel("Id : ");
+        lid.setBounds(40,15,150,20);//(liman,     ,lta7t)
+        getContentPane().add(lid);
+
         labelnom = new JLabel("Nom : ");
-        labelnom.setBounds(40,15,150,20);//
+        labelnom.setBounds(40,15,150,20);//(liman,     ,lta7t)
         getContentPane().add(labelnom);
 
         lprenom = new JLabel("Prenom : ");
@@ -106,6 +110,11 @@ public class NouveauCv extends JFrame implements ActionListener{
         getContentPane().add(lpdescription);
 
         /************ text field **********/
+
+
+        id = new JTextField();
+        id.setBounds(250,15,150,20);//(liman,     ,lta7t)
+        getContentPane().add(id);
 
         nom = new JTextField();
         nom.setBounds(250,15,150,20);//(liman,     ,lta7t)
@@ -207,6 +216,7 @@ public class NouveauCv extends JFrame implements ActionListener{
 
         Object source = evt.getSource();
         if(source == enregistrer){
+            String vnom = nom.getText();
             this.setVisible(false);
         }
     }

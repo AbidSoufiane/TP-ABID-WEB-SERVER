@@ -19,25 +19,25 @@ public class CurriculumController {
 
     @Autowired
     public void SetCurriculum(){
-        Formation form1= new Formation("du","au","formation1");
-        Formation form2= new Formation("du","au","formation2");
-        Formation form3= new Formation("du","au","formation3");
+        Formation form1= new Formation("du 01/09/2008","au 30/06/2009","BAC Science");
+        Formation form2= new Formation("du 10/10/2009","au 27/06/2013","BAC+5");
+        Formation form3= new Formation("du 09/09/2013","au 30/05/2014","M1 GIL");
 
-        ExperiencePro exp1= new ExperiencePro("du","au","Experience1");
-        ExperiencePro exp2= new ExperiencePro("du","au","Experience2");
-        ExperiencePro exp3= new ExperiencePro("du","au","Experience3");
+        ExperiencePro exp1= new ExperiencePro("du 07/07/2012","au 09/10/2013","Stage PFC");
+        ExperiencePro exp2= new ExperiencePro("du 02/02/2013","au 03/06/2013","Stage PFE");
+        ExperiencePro exp3= new ExperiencePro("du 26/06/2014","au 26/09/2014","Experience3");
 
-        ProjetRealiser proj1= new ProjetRealiser("Projet1","premier");
-        ProjetRealiser proj2= new ProjetRealiser("Projet2","deuxieme");
-        ProjetRealiser proj3= new ProjetRealiser("Projet3","troisieme");
+        ProjetRealiser proj1= new ProjetRealiser("Projet1","Android");
+        ProjetRealiser proj2= new ProjetRealiser("Projet2","JEE");
+        ProjetRealiser proj3= new ProjetRealiser("Projet3","OpenERP");
 
-        ConnaissanceTech con1= new ConnaissanceTech("Connaissance1","a,b,c");
-        ConnaissanceTech con2= new ConnaissanceTech("Connaissance2","a,b,c");
-        ConnaissanceTech con3= new ConnaissanceTech("Connaissance3","a,b,c");
+        ConnaissanceTech con1= new ConnaissanceTech("Langage de programmation","Java,jquery,php");
+        ConnaissanceTech con2= new ConnaissanceTech("Systeme d'exploitation","Windows,Linux,Mac");
+        ConnaissanceTech con3= new ConnaissanceTech("Outils","Innovator,Entreprise Architect,Eclipse");
 
-        Langues lang1= new Langues("Francais","A");
-        Langues lang2= new Langues("Anglais","A");
-        Langues lang3= new Langues("Arabe","A");
+        Langues lang1= new Langues("Francais","bon");
+        Langues lang2= new Langues("Anglais","Bon");
+        Langues lang3= new Langues("Arabe","Bon");
 
 
 
@@ -71,10 +71,10 @@ public class CurriculumController {
         loisir.getLoisirs().add("Ping Pong");
         loisir.getLoisirs().add("natation");
 
-        Curriculum resume1= new Curriculum(4,"Abid", "Soufiane", "Rabat1", "0123456789", "26", "célibataire", "sfn.abid@gmail.com", "M1 GIL", formations, experience, projets, connaissance, langues, loisir);
-        Curriculum resume2= new Curriculum(5,"Abid", "Soufiane", "Rabat2", "0123456789", "26", "célibataire", "sfn.abid@gmail.com", "M1 GIL", formations, experience, projets, connaissance, langues, loisir);
-        Curriculum resume3= new Curriculum(6,"Abid", "Soufiane", "Rabat3", "0123456789", "26", "célibataire", "sfn.abid@gmail.com", "M1 GIL", formations, experience, projets, connaissance, langues, loisir);
-        Curriculum resume4= new Curriculum(7,"Abid", "Soufiane", "Rabat4", "0123456789", "26", "célibataire", "sfn.abid@gmail.com", "M1 GIL", formations, experience, projets, connaissance, langues, loisir);
+        Curriculum resume1= new Curriculum(1,"Daniel", "moraca", "espagne", "0123456789", "23", "célibataire", "dav.mora@gmail.com", "Architecte", formations, experience, projets, connaissance, langues, loisir);
+        Curriculum resume2= new Curriculum(2,"Mamado", "Diara", "senegale", "0583456789", "27", "célibataire", "mamado@gmail.com", "ENSA", formations, experience, projets, connaissance, langues, loisir);
+        Curriculum resume3= new Curriculum(3,"David", "guetta", "GB", "0248456789", "21", "célibataire", "getta@gmail.com", "M1 GIL", formations, experience, projets, connaissance, langues, loisir);
+        Curriculum resume4= new Curriculum(4,"Abid", "Soufiane", "France", "0123456789", "26", "célibataire", "sfn.abid@gmail.com", "M1 GIL", formations, experience, projets, connaissance, langues, loisir);
 
         listecv.getListcv().add(resume1);
         listecv.getListcv().add(resume2);

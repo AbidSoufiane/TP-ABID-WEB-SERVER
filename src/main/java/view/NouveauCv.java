@@ -17,6 +17,7 @@ import javax.xml.bind.JAXBException;
 /**
  * Created by Abid on 02/05/2014.
  */
+
 public class NouveauCv extends JFrame implements ActionListener{
     private JTextField id, nom, prenom, adresse, age,mail, tele, situation,loisir, titrre,  cdescription, cspecialite, edatedebut, edatefin, edescription, fdatedebut, fdatefin, diplome, lniveau, lnom, projet, pdescription;
     private JLabel linfoPerso,lformation,lexperience, lproject, Lcompetance,llangue, lloisir, lid, labelnom, lprenom, ladresse, lage, lmail, ltele, lsituation, ltitrre,  lcdescription, lcspecialite, ledatedebut, ledatefin, ledescription, lfdatedebut, lfdatefin, ldiplome, llniveau, llnom, lprojet, lpdescription;
@@ -79,15 +80,15 @@ public class NouveauCv extends JFrame implements ActionListener{
         getContentPane().add(lformation);
 
         lfdatedebut = new JLabel("Formation date debut : ");
-        lfdatedebut.setBounds(40,230,150,20);//(liman,     ,lta7t)
+        lfdatedebut.setBounds(40,230,150,20);
         getContentPane().add(lfdatedebut);
 
         lfdatefin = new JLabel("Formation date fin : ");
-        lfdatefin.setBounds(40,250,150,20);//(liman,     ,lta7t)
+        lfdatefin.setBounds(40,250,150,20);
         getContentPane().add(lfdatefin);
 
         ldiplome = new JLabel("Diplome  : ");
-        ldiplome.setBounds(40,270,150,20);//(liman,     ,lta7t)
+        ldiplome.setBounds(40,270,150,20);
         getContentPane().add(ldiplome);
 
 
@@ -101,12 +102,12 @@ public class NouveauCv extends JFrame implements ActionListener{
         getContentPane().add(ledatedebut);
 
         ledatefin = new JLabel("Experience date fin : ");
-        ledatefin.setBounds(40,330,150,20);//(liman,     ,lta7t)
+        ledatefin.setBounds(40,330,150,20);
         getContentPane().add(ledatefin);
 
 
         ledescription = new JLabel("Description : ");
-        ledescription.setBounds(40,350,150,20);//(liman,     ,lta7t)
+        ledescription.setBounds(40,350,150,20);
         getContentPane().add(ledescription);
 
         lproject = new JLabel("Projet Réalisés  : ");
@@ -114,11 +115,11 @@ public class NouveauCv extends JFrame implements ActionListener{
         getContentPane().add(lproject);
 
         lprojet = new JLabel("Projet : ");
-        lprojet.setBounds(40,390,150,20);//(liman,     ,lta7t)
+        lprojet.setBounds(40,390,150,20);
         getContentPane().add(lprojet);
 
         lpdescription = new JLabel("Description: ");
-        lpdescription.setBounds(40,410,150,20);//(liman,     ,lta7t)
+        lpdescription.setBounds(40,410,150,20);
         getContentPane().add(lpdescription);
 
         Lcompetance = new JLabel("Connaissance techniques  : ");
@@ -138,11 +139,11 @@ public class NouveauCv extends JFrame implements ActionListener{
         getContentPane().add(llangue);
 
         llnom = new JLabel("Langue nom : ");
-        llnom.setBounds(40,510,150,20);//(liman,     ,lta7t)
+        llnom.setBounds(40,510,150,20);
         getContentPane().add(llnom);
 
         llniveau = new JLabel("Langue niveau : ");
-        llniveau.setBounds(40,530,150,20);//(liman,     ,lta7t)
+        llniveau.setBounds(40,530,150,20);
         getContentPane().add(llniveau);
 
         lloisir = new JLabel("Loisirs  : ");
@@ -150,161 +151,151 @@ public class NouveauCv extends JFrame implements ActionListener{
         getContentPane().add(lloisir);
 
 
-
-
-
-
-
         /************ text field **********/
 
 
         id = new JTextField();
-        id.setBounds(250,30,150,20);//40,30,150,20
+        id.setBounds(250,30,150,20);
         getContentPane().add(id);
 
         nom = new JTextField();
-        nom.setBounds(250,50,150,20);//(liman,     ,lta7t)
+        nom.setBounds(250,50,150,20);
         getContentPane().add(nom);
 
         prenom = new JTextField();
-        prenom.setBounds(250,70,150,20);//(liman,     ,lta7t)
+        prenom.setBounds(250,70,150,20);
         getContentPane().add(prenom);
 
         adresse = new JTextField();
-        adresse.setBounds(250,90,150,20);//(liman,     ,lta7t)
+        adresse.setBounds(250,90,150,20);
         getContentPane().add(adresse);
 
         age = new JTextField();
-        age.setBounds(250,110,150,20);//(liman,     ,lta7t)
+        age.setBounds(250,110,150,20);
         getContentPane().add(age);
 
         mail = new JTextField();
-        mail.setBounds(250,130,150,20);//(liman,     ,lta7t)
+        mail.setBounds(250,130,150,20);
         getContentPane().add(mail);
 
         tele = new JTextField();
-        tele.setBounds(250,150,150,20);//(liman,     ,lta7t)
+        tele.setBounds(250,150,150,20);
         getContentPane().add(tele);
 
         situation = new JTextField();
-        situation.setBounds(250,170,150,20);//(liman,     ,lta7t)
+        situation.setBounds(250,170,150,20);
         getContentPane().add(situation);
 
         titrre = new JTextField();
-        titrre.setBounds(250,190,150,20);//(liman,     ,lta7t)
+        titrre.setBounds(250,190,150,20);
         getContentPane().add(titrre);
 
 
-
+        /************************************/
 
 
         fdatedebut = new JTextField();
-        fdatedebut.setBounds(250,230,150,20);//(liman,     ,lta7t)
+        fdatedebut.setBounds(250,230,150,20);
         getContentPane().add(fdatedebut);
 
         fdatefin = new JTextField();
-        fdatefin.setBounds(250,250,150,20);//(liman,     ,lta7t)
+        fdatefin.setBounds(250,250,150,20);
         getContentPane().add(fdatefin);
 
         diplome = new JTextField();
-        diplome.setBounds(250,270,150,20);//(liman,     ,lta7t)
+        diplome.setBounds(250,270,150,20);
         getContentPane().add(diplome);
 
         AjoutForma = new JButton("Ajouter");
         AjoutForma.addActionListener(this);
-        AjoutForma.setBounds(420,250,100,20);//(liman,     ,lta7t)
+        AjoutForma.setBounds(420,250,100,20);
         getContentPane().add(AjoutForma);
 
 
-
+        /************************************/
 
 
         edatedebut = new JTextField();
-        edatedebut.setBounds(250,310,150,20);//(liman,     ,lta7t)
+        edatedebut.setBounds(250,310,150,20);
         getContentPane().add(edatedebut);
 
         edatefin = new JTextField();
-        edatefin.setBounds(250,330,150,20);//(liman,     ,lta7t)
+        edatefin.setBounds(250,330,150,20);
         getContentPane().add(edatefin);
 
         edescription = new JTextField();
-        edescription.setBounds(250,350,150,20);//(liman,     ,lta7t)
+        edescription.setBounds(250,350,150,20);
         getContentPane().add(edescription);
 
         AjoutExper = new JButton("Ajouter");
         AjoutExper.addActionListener(this);
-        AjoutExper.setBounds(420,330,100,20);//(liman,     ,lta7t)
+        AjoutExper.setBounds(420,330,100,20);
         getContentPane().add(AjoutExper);
 
 
-
+        /************************************/
 
 
         projet = new JTextField();
-        projet.setBounds(250,390,150,20);//250,390,150,20
+        projet.setBounds(250,390,150,20);
         getContentPane().add(projet);
 
         pdescription = new JTextField();
-        pdescription.setBounds(250,410,150,20);//250,430,150,20
+        pdescription.setBounds(250,410,150,20);
         getContentPane().add(pdescription);
 
         AjoutProjet = new JButton("Ajouter");
         AjoutProjet.addActionListener(this);
-        AjoutProjet.setBounds(420,400,100,20);//(liman,     ,lta7t)
+        AjoutProjet.setBounds(420,400,100,20);
         getContentPane().add(AjoutProjet);
 
-
+        /************************************/
 
 
         cdescription = new JTextField();
-        cdescription.setBounds(250,450,150,20);//(liman,     ,lta7t)
+        cdescription.setBounds(250,450,150,20);
         getContentPane().add(cdescription);
 
         cspecialite = new JTextField();
-        cspecialite.setBounds(250,470,150,20);//(liman,     ,lta7t)
+        cspecialite.setBounds(250,470,150,20);
         getContentPane().add(cspecialite);
 
         AjoutConn = new JButton("Ajouter");
         AjoutConn.addActionListener(this);
-        AjoutConn.setBounds(420,460,100,20);//(liman,     ,lta7t)
+        AjoutConn.setBounds(420,460,100,20);
         getContentPane().add(AjoutConn);
 
-
+        /************************************/
 
         lnom = new JTextField();
-        lnom.setBounds(250,510,150,20);//(liman,     ,lta7t)
+        lnom.setBounds(250,510,150,20);
         getContentPane().add(lnom);
 
         lniveau = new JTextField();
-        lniveau.setBounds(250,530,150,20);//(liman,     ,lta7t)
+        lniveau.setBounds(250,530,150,20);
         getContentPane().add(lniveau);
 
         AjoutLang = new JButton("Ajouter");
         AjoutLang.addActionListener(this);
-        AjoutLang.setBounds(420,520,100,20);//(liman,     ,lta7t)
+        AjoutLang.setBounds(420,520,100,20);
         getContentPane().add(AjoutLang);
 
-
+        /************************************/
 
         loisir = new JTextField();
-        loisir.setBounds(250,560,150,20);//(liman,     ,lta7t)
+        loisir.setBounds(250,560,150,20);
         getContentPane().add(loisir);
 
         AjoutLoisir = new JButton("Ajouter");
         AjoutLoisir.addActionListener(this);
-        AjoutLoisir.setBounds(420,560,100,20);//(liman,     ,lta7t)
+        AjoutLoisir.setBounds(420,560,100,20);
         getContentPane().add(AjoutLoisir);
-
-
-
-
-
 
         /************************************/
 
         enregistrer = new JButton("Enregistrer");
         enregistrer.addActionListener(this);
-        enregistrer.setBounds(40,620,150,20);//(liman,     ,lta7t)
+        enregistrer.setBounds(40,620,150,20);
         getContentPane().add(enregistrer);
 
 

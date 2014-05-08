@@ -21,7 +21,7 @@ public class RequetPut {
     private JAXBContext jc;
 
     private static final QName qname = new QName("", "");
-    private static final String url = "http://localhost:8080/SpringMVC/Rest/Curriculum/";
+    private static final String url = "http://projet-abid-web.abidsoufiane.cloudbees.net/Rest/Curriculum/";
 
     public RequetPut() {
         try {
